@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 300px;
+      /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <div class="column">
+      <form action="/" method="POST">
+        <label for="amount">Enter Amount</label><br>
+        <input type="number" id="amount" name="amount" step="0.01"><br>
+        <hr>
+        <input type="submit" value="Pay using PayPal">
+      </form>
+    </div>
+    <div class="column">
+      <form action="/transactionSearch" method="POST">
+        <label for="email-address">Enter Your Email Address</label><br>
+        <input type="text" id="email-address" name="email-address"><br>
+        <hr>
+        <input type="submit" value="Get Transaction List">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+web: gunicorn --chdir paypal_assignment run:app
